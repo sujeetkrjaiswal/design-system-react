@@ -4,8 +4,10 @@ exports[`Button Component Snapshots should match snapshots as primary themed 1`]
 <button
   className="button basic primary md"
   disabled={false}
+  onClick={[Function]}
+  type="button"
 >
-  Placeholder
+  Test Button
 </button>
 `;
 
@@ -13,7 +15,9 @@ exports[`Button Component Snapshots should match snapshots as secondary themed 1
 <button
   className="button basic primary md"
   disabled={false}
+  onClick={[Function]}
+  type="button"
 >
-  Placeholder
+  Test Button
 </button>
 `;

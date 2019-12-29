@@ -1,19 +1,23 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import ButtonComponent from './Button';
+import Button from './Button';
 
 describe('Button Component', () => {
   let props: any;
 
   beforeEach(() => {
     props = {
-      theme: 'primary',
+      display: 'basic',
+      color: 'primary',
+      size: 'md',
+      disabled: false,
+      onClick: () => {},
     };
   });
 
   // eslint-disable-next-line react/jsx-props-no-spreading
-  const renderWrapper = () => shallow(<ButtonComponent {...props} />);
+  const renderWrapper = () => shallow(<Button {...props}>Test Button</Button>);
 
   describe('Snapshots', () => {
     it('should match snapshots as primary themed', () => {
