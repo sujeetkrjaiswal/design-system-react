@@ -23,9 +23,9 @@ jobs:
 
     - name: Build
       run: |
+        tree src typeings
         npm ci
         npm run build:sb
-        tree src typeings
 
     - name: Deploy to GH Pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
