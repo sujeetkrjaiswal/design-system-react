@@ -1,0 +1,68 @@
+import {
+  Story,
+  Preview,
+  Props,
+  Source,
+  Description,
+  ColorPalette,
+  ColorItem,
+  Meta
+} from "@storybook/addon-docs/blocks";
+
+import Button from "./Button";
+
+<Meta title="MDX:Button Component Docs" component={Button} />
+
+# Button Component
+<Story id="button-component--primary"/>
+<Description of={Button} />
+<Props of={Button} />
+
+Below are the props that this button accepts.
+
+```typescript
+interface IButtonComponentProps {
+  label: string;
+  display?: "fab" | "icon" | "stroked" | "flat" | "raised" | "basic";
+  color?: "primary" | "secondary" | "warn";
+  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  disabled?: boolean;
+}
+```
+
+## Currently Selected State
+
+Currently active Button state
+Source Code for the above state
+Props required for above state
+
+## Available color variation
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={["#FFFFFF", "#F8F8F8", "#F3F3F3"]}
+  />
+  <ColorItem
+    title="theme.color.primary"
+    subtitle="Coral"
+    colors={["#FF4785"]}
+  />
+  <ColorItem
+    title="theme.color.secondary"
+    subtitle="Ocean"
+    colors={["#1EA7FD"]}
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={[
+      "rgba(102,191,60,1)",
+      "rgba(102,191,60,.8)",
+      "rgba(102,191,60,.6)",
+      "rgba(102,191,60,.3)"
+    ]}
+  />
+</ColorPalette>

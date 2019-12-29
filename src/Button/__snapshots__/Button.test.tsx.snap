@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Component Snapshots should match snapshots as primary themed 1`] = `
+<button
+  className="button basic primary md"
+  disabled={false}
+>
+  Placeholder
+</button>
+`;
+
+exports[`Button Component Snapshots should match snapshots as secondary themed 1`] = `
+<button
+  className="button basic primary md"
+  disabled={false}
+>
+  Placeholder
+</button>
+`;

@@ -1,0 +1,127 @@
+import {
+  Story,
+  Preview,
+  Props,
+  Source,
+  Description,
+  ColorPalette,
+  ColorItem,
+  Meta
+} from "@storybook/addon-docs/blocks";
+
+import Button from "./Button";
+
+<Meta title="MDX:Button Component Docs" component={Button} />
+
+# Button Component
+
+<Description of={Button} />
+<Props of={Button} />
+
+Below are the props that this button accepts.
+
+```typescript
+interface IButtonComponentProps {
+  label: string;
+  display?: "fab" | "icon" | "stroked" | "flat" | "raised" | "basic";
+  color?: "primary" | "secondary" | "warn";
+  size?: "xsm" | "sm" | "md" | "lg" | "xlg";
+  onClick?: (e: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
+  disabled?: boolean;
+}
+```
+
+## Currently Selected State
+
+Currently active Button state
+Source Code for the above state
+Props required for above state
+
+## Available color variation
+
+<ColorPalette>
+  <ColorItem
+    title="theme.color.greyscale"
+    subtitle="Some of the greys"
+    colors={["#FFFFFF", "#F8F8F8", "#F3F3F3"]}
+  />
+  <ColorItem
+    title="theme.color.primary"
+    subtitle="Coral"
+    colors={["#FF4785"]}
+  />
+  <ColorItem
+    title="theme.color.secondary"
+    subtitle="Ocean"
+    colors={["#1EA7FD"]}
+  />
+  <ColorItem
+    title="theme.color.positive"
+    subtitle="Green"
+    colors={[
+      "rgba(102,191,60,1)",
+      "rgba(102,191,60,.8)",
+      "rgba(102,191,60,.6)",
+      "rgba(102,191,60,.3)"
+    ]}
+  />
+</ColorPalette>
+
+## Preview of different states
+
+<Preview>
+  <Story name="basic primary button">
+    <Button
+      label="Basic"
+      display="basic"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+  <Story name="Flat primary button">
+    <Button
+      label="Flat"
+      display="flat"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+  <Story name="Raised primary button">
+    <Button
+      label="Raised"
+      display="raised"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+  <Story name="Stroked primary button">
+    <Button
+      label="Stroked"
+      display="stroked"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+  <Story name="Icon primary button">
+    <Button
+      label="Icon"
+      display="icon"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+  <Story name="Fab primary button">
+    <Button
+      label="Fab"
+      display="fab"
+      color="primary"
+      size={"md"}
+      disabled={false}
+    />
+  </Story>
+</Preview>

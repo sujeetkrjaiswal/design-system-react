@@ -1,0 +1,123 @@
+// Variables
+$primary: #463cff;
+$primary-light: #8caeff;
+$primary-dark: #400eff;
+$primary-text: #ffffff;
+
+$secondary: #9908ff;
+$secondary-light: #de95ff;
+$secondary-dark: #8000ff;
+$secondary-text: #ffffff;
+
+$warn: #ff571a;
+$warn-light: #ffb46e;
+$warn-dark: #ff3800;
+$warn-text: #ffffff;
+
+// base styling for all buttons
+.button {
+  padding: 10px;
+  border-radius: 0.2rem;
+  transition: background-color 0.25s, color 0.25s;
+}
+
+// size variations
+.xsm {
+  font-size: 0.5rem;
+  padding: 0.5rem;
+}
+.sm {
+  font-size: 0.75rem;
+  padding: 0.75rem;
+}
+.md {
+  font-size: 1rem;
+  padding: 1rem;
+}
+.lg {
+  font-size: 1.25rem;
+  padding: 1.25rem;
+}
+.xlg {
+  font-size: 1.5rem;
+  padding: 1.5rem;
+}
+
+// Display variation
+
+.icon {
+  border-radius: 50%;
+  display: inline-block;
+}
+.stroked {
+  border-width: 2px;
+  border-style: solid;
+}
+.basic,
+.icon,
+.stroked {
+  &.primary {
+    color: $primary;
+  }
+  &.secondary {
+    color: $secondary;
+  }
+  &.warn {
+    color: $warn;
+  }
+  &:hover {
+    // add background based on color variation
+    &.primary {
+      background-color: $primary-light;
+    }
+    &.secondary {
+      background-color: $secondary-light;
+    }
+    &.warn {
+      background-color: $warn-light;
+    }
+  }
+}
+
+.fab {
+  border-radius: 50%;
+  display: inline-block;
+}
+.flat,
+.fab,
+.raised {
+  &.primary {
+    background-color: $primary;
+    color: $primary-text;
+  }
+  &.secondary {
+    background-color: $secondary;
+    color: $secondary-text;
+  }
+  &.warn {
+    background-color: $warn;
+    color: $warn-text;
+  }
+}
+.flat {
+  &:hover {
+    &.primary {
+      background-color: $primary-dark;
+    }
+    &.secondary {
+      background-color: $secondary-dark;
+    }
+    &.warn {
+      background-color: $warn-dark;
+    }
+  }
+}
+.raised,
+.fab {
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+  &:hover {
+    box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.2),
+      0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12);
+  }
+}
