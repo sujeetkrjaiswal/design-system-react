@@ -6,6 +6,7 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'airbnb',
+    "plugin:jest/recommended",
   ],
   globals: {
     Atomics: 'readonly',
@@ -26,6 +27,7 @@ module.exports = {
   rules: {
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': 'error',
+    'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
     'import/extensions': ['error', 'ignorePackages', {
       js: 'never',
       mjs: 'never',

@@ -12,6 +12,7 @@ describe('Button Component', () => {
     };
   });
 
+  // eslint-disable-next-line react/jsx-props-no-spreading
   const renderWrapper = () => shallow(<ButtonComponent {...props} />);
 
   describe('Snapshots', () => {

@@ -1,31 +1,42 @@
 import React, { FC } from 'react';
+import PropTypes, { InferProps } from 'prop-types';
 import styles from './Button.module.scss';
-import { IButtonProps } from './Button.types';
 
-const ButtonComponent: FC<IButtonProps> = ({
+const propTypes = {
+  // some description about color
+  color: PropTypes.oneOf(['primary', 'secondary', 'warn']).isRequired,
+  display: PropTypes.oneOf(['fab', 'icon', 'stroked', 'flat', 'raised', 'basic']).isRequired,
+  size: PropTypes.oneOf(['xsm', 'sm', 'md', 'lg', 'xlg']).isRequired,
+  onClick: PropTypes.func.isRequired,
+  disabled: PropTypes.bool.isRequired,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.element]).isRequired,
+};
+type IButtonProps = InferProps<typeof propTypes>
+
+const Button: FC<IButtonProps> = ({
   // Name of the button
-  label,
-  display = 'basic', // display value of the button
-  color = 'primary',
-  size = 'md',
-  disabled = false,
+  display, // display value of the button
+  color,
+  size,
+  disabled,
   onClick,
+  children,
 }) => (
   <button
     className={`${styles.button} ${styles[display]} ${styles[color]} ${styles[size]}`}
     onClick={onClick}
     disabled={disabled}
+    type="button"
   >
-    {label}
+    {children}
   </button>
 );
 
-ButtonComponent.defaultProps = {
-  label: 'Placeholder',
-  color: 'primary',
-  display: 'basic',
-  size: 'md',
-  disabled: false,
+Button.propTypes = propTypes;
+
+Button.defaultProps = {
+
 };
 
-export default ButtonComponent;
+
+export default Button;

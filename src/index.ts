@@ -1,3 +1,4 @@
-import Button from "./Button";
+import Button from './Button';
 
-export { Button };
+const test = 12;
+export { Button, test };
