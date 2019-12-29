@@ -1,8 +1,0 @@
-{
-  "extends": "../tsconfig",
-  "compilerOptions": {
-    "noImplicitAny": false,
-    "types": ["@types/jest", "../typings/scss", "../typings/mdx", "../typings/md"]
-  },
-  "exclude": ["node_modules"]
-}
