@@ -1,0 +1,6 @@
+/.idea/**
+/.storybook/**
+/.vscode/**
+/build/**
+/node_modules/**
+/storybook-static/**
