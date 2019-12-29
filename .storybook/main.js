@@ -35,10 +35,10 @@ module.exports = {
       name: '@storybook/preset-typescript',
       options: {
         tsLoaderOptions: {
-          configFile: path.resolve(__dirname, './tsconfig.storybook.json'),
+          configFile: path.resolve(__dirname, '../tsconfig.storybook.json'),
         },
         tsDocgenLoaderOptions: {
-          tsconfigPath: path.resolve(__dirname, './tsconfig.storybook.json'),
+          tsconfigPath: path.resolve(__dirname, '../tsconfig.storybook.json'),
         },
         forkTsCheckerWebpackPluginOptions: {
           colors: false, // disables built-in colors in logger messages
