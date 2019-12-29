@@ -33,5 +33,3 @@ jobs:
         BRANCH: gh-pages
         FOLDER: storybook-static
         CLEAN: true
-      env:
-        CI: true
