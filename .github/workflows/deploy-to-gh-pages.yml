@@ -23,6 +23,7 @@ jobs:
 
     - name: Build
       run: |
+        tree src typeings
         npm ci
         npm run build:sb
 
@@ -33,5 +34,3 @@ jobs:
         BRANCH: gh-pages
         FOLDER: storybook-static
         CLEAN: true
-      env:
-        CI: true
